@@ -3,7 +3,7 @@
 A simple workout buddy mobile application, finished around April 2020
 
 
-## Screenshots
+## Screenshots:
 ![image](https://github.com/user-attachments/assets/d7bd20b5-3b78-47a5-9dbb-526175eac200)
 ![image](https://github.com/user-attachments/assets/0a413349-0662-47db-abb0-1ce2d100497c)
 ![image](https://github.com/user-attachments/assets/393f3dda-fa22-4851-a5db-e901768f7e01)
