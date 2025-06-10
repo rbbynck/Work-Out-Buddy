@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Exercise_Plan_Lose_Day">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/exercise_plan_lose_day_Appbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:expandedTitleMarginBottom="20dp"
+            app:expandedTitleMarginStart="15dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/title"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/work"
+                app:layout_collapseMode="parallax" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day_day_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Day 30"
+                    android:textColor="@color/black_primary"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Lose weight and keep fit"
+                    android:textColor="@color/whiteColor" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar_exercise_plan_lose_day"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        android:overScrollMode="never"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!--HEADER-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="|"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24 Mins \u2022 13 Workouts"
+                    android:textColor="@color/black_primary"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!--FIRST EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="LUNGES"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="35 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_lunges" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <!--SECOND EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="HEEL TOUCH"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_heeltouch" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--THIRD EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="WALL PUSH-UPS"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_wallpushups" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--FOURTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="BUTT BRIDGE"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_buttbridge" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--FIFTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="CLAPS OVER HEAD"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_clapsoverhead" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--SIXTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="PLANK"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="45 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_plank" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--SEVENTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="LUNGES"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_lunges" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--EIGTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="HEEL TOUCH"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="50 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_heeltouch" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--NINTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="WALL PUSH-UPS"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="50 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_wallpushups" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--TENTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="SWIMMER AND SUPERMAN"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_swimmerandsuperman" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--ELEVENTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="BUTT BRIDGE"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="50 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_11"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_buttbridge" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--TWELFTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="CLAPS OVER HEAD"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="40 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_12"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_clapsoverhead" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <!--THIRTEENTH EXERCISE-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day_layout_13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_title_13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="bottom"
+                        android:text="PLANK"
+                        android:textColor="@color/black_primary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day_layout_seconds_13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="50 s"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/exercise_plan_lose_day_layout_image_13"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/exercise_icon_lose_plank" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/exercise_plan_lose_day_layout_view_13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/exercise_plan_lose_day_start"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:background="@color/colorSecondary"
+            android:elevation="5dp"
+            android:text="Start" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,2007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".Activity_Exercise_Plan">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/exercise_plan_AppBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:expandedTitleMarginBottom="20dp"
+            app:expandedTitleMarginStart="15dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/title"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/work"
+                app:layout_collapseMode="parallax" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/exercise_plan_status_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="30 Days left"
+                        android:textColor="@color/black_primary" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/exercise_plan_status_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:indeterminate="false"
+                    android:max="30"
+                    android:progress="0" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar_exercise_plan"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <!--DAY 1-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day1_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 1"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day1_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day1_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day1_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day1_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 2-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day2_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 2"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day2_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day2_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day2_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day2_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 3-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day3_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 3"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day3_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day3_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day3_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day3_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--DAY 4-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day4"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day4_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 4"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day4_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day4_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--DAY 5-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day5"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day5_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 5"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day5_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day5_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day5_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day5_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 6-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day6"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day6_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 6"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day6_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day6_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day6_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day6_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 7-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day7"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day7_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 7"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day7_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day7_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day7_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day7_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 8-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day8"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day8_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 8"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day8_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day8_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 9-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day9"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day9_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 9"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day9_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day9_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day9_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day9_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 10-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day10"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day10_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 10"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day10_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day10_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day10_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day10_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 11-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day11"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day11_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 11"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day11_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day11_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day11_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day11_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 12-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day12"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day12_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 12"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day12_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day12_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--DAY 13-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day13"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day13_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 13"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day13_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day13_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day13_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day13_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 14-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day14"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day14_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 14"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day14_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day14_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day14_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day14_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 15-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day15"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day15_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 15"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day15_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day15_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day15_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day15_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 16-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day16"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day16_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 16"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day16_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day16_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 17-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day17"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day17_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 17"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day17_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day17_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day17_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day17_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 18-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day18"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day18_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 18"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day18_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day18_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day18_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day18_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 19-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day19"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day19_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 19"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day19_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day19_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day19_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day19_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 20-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day20"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day20_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 20"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day20_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day20_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 21-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day21"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day21_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 21"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day21_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day21_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day21_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day21_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 22-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day22"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day22_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 22"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day22_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day22_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day22_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day22_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 23-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day23"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day23_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 23"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day23_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day23_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day23_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day23_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 24-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day24"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day24_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 24"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day24_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day24_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 25-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day25"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day25_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 25"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day25_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day25_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day25_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day25_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 26-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day26"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day26_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 26"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day26_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day26_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day26_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day26_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--DAY 27-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day27"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day27_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 27"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day27_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day27_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day27_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day27_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 28-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day28"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day28_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 28"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day28_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_exercise_rest" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day28_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 29-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day29"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day29_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 29"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day29_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day29_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day29_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day29_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--DAY 30-->
+            <LinearLayout
+                android:id="@+id/exercise_plan_lose_day30"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/exercise_plan_layout_background"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/exercise_plan_lose_day30_TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Day 30"
+                    android:textColor="@color/black_primary"
+                    android:textSize="22dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day30_STATUS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/exercise_plan_lose_day30_Progress"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progress_circle_background"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_circle" />
+
+                    <TextView
+                        android:id="@+id/exercise_plan_lose_day30_ProgressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/exercise_plan_lose_day30_DONE"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_exercise_done" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

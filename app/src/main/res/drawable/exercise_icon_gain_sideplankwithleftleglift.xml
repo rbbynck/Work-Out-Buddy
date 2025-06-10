@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/gain_side_plank_with_left_leg_lift_1"
+        android:duration="1000" />
+    <item
+        android:drawable="@drawable/gain_side_plank_with_left_leg_lift_2"
+        android:duration="1000" />
+</animation-list>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Work-Out Buddy</string>
+    <string name="title">Triceps</string>
+
+
+    <!-- TODO: HEADER STRINGS-->
+    <string name="header_1">BMI</string>
+    <string name="header_2">EXERCISE PLAN</string>
+    <string name="header_3">ARE YOU READY TO BEGIN?</string>
+
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="done">Done</string>
+
+    <string name="bmi1">Your BMI is underweight, meaning you need to gain weight to become healthy. Eat more than you always do, and exercise daily.</string>
+    <string name="bmi2">Your BMI is normal, meaning you are healthy. Just exercise often to keep your body healthy</string>
+    <string name="bmi3">Your BMI is obese, meaning you need to lose you weights. Keep a strict diet and exercise daily.</string>
+    <string name="bmi4">Your BMI is obese, meaning you are not very healthy and you need to lose you weights. Keep a strict diet and exercise daily.</string>
+
+
+    <string name="exerciseplan1">Since you are underweight, you need to gain in order to be healthy. We created an exercise plan for you to gain weight. Exercise daily and try to eat more that your usual diet</string>
+    <string name="exerciseplan2">Since you are normal, you can use our different exercise plan to tone your body.</string>
+    <string name="exerciseplan3">Since you are overweight, you need to lose in order to be healthy and physically fir. We created an exercise plan for you to lose weight. Exercise daily and try to maintain a healthy diet</string>
+    <string name="exerciseplan4">Since you are overweight, you need to lose in order to be healthy and physically fir. We created an exercise plan for you to lose weight. Exercise daily and maintain a strict diet</string>
+
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+</resources>

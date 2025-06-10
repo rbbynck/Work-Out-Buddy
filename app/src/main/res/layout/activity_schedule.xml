@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_3"
+    tools:context=".Schedule">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:gravity="center_horizontal"
+                        android:text="SCHEDULES:"
+                        android:textColor="@color/black_primary"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/schedule_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule1Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule1Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule1Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule1Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule2Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule2Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule2Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule2Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule3Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule3Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule3Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule3Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule4Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule4Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule4Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule4Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule5Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule5Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule5Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule5Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule6Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule6Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule6Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule6Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule7Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule7Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule7Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule7Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule8Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule8Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule8Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule8Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule9Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule9Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule9Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule9Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--SCHEDULE LAYOUT -->
+                    <LinearLayout
+                        android:id="@+id/schedule_schedule10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@color/whiteColor"
+                        android:elevation="3dp"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/schedule_schedule10Time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="23:02"
+                                android:textColor="@color/black_primary"
+                                android:textSize="25sp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <Switch
+                                android:id="@+id/schedule_schedule10Switch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Repeat"
+                                    android:textColor="@color/black_primary" />
+
+                                <TextView
+                                    android:id="@+id/schedule_schedule10Days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sun, Mon, Tue, Wed, Thu, Fri, Sat" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/schedule_schedule10Delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_delete_black_24dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="20dp"
+            android:paddingBottom="50dp">
+
+            <ImageView
+                android:id="@+id/schedule_AddButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/background_round_addbutton"
+                android:src="@drawable/ic_add_black_24dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>
